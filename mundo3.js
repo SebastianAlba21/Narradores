@@ -1,4 +1,4 @@
-export default class Mundo2 extends Phaser.Scene {
+export default class Mundo3 extends Phaser.Scene {
     constructor() {
         super("Mundo3");
     }

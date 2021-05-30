@@ -10,7 +10,7 @@ const configuracion = {
     version: '1.0.0',
 
     type: Phaser.CANVAS,
-    backgroundColor: '#FF0000', 
+    backgroundColor: '#fffff', 
     width: 1920, 
     height: 1080,
     parent: 'container', 
