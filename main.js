@@ -1,3 +1,4 @@
+import Mundop from './mundop.js'
 import Mundo from './mundo.js';
 import Mundo2 from './mundo2.js';
 import Mundo3 from './mundo3.js';
@@ -20,8 +21,13 @@ const configuracion = {
             debug: false
         }
     },
+    scale: {
+        mode: Phaser.Scale.FIT,
+        parent: 'phaser-example',
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+    },
 
 
-scene: [menu1, Mundo, Mundo2, Mundo3]
+scene: [Mundop, Mundo, Mundo2, Mundo3]
 }
 const game = new Phaser.Game(configuracion);

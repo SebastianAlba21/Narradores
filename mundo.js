@@ -1,4 +1,7 @@
 export default class Mundo extends Phaser.Scene {
+    constructor() {
+        super("Mundo");
+    }
     init() {
 
     }
