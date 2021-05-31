@@ -8,8 +8,8 @@ export default class Mundo2 extends Phaser.Scene {
 
     preload() {
         this.load.image('bus', 'Fondos/bus.jpg');
-        this.load.spritesheet('personaje2',
-            'Personajes/personaje2.png',
+        this.load.spritesheet('personaje1',
+            'Personajes/personaje1.png',
             { frameWidth: 205, frameHeight: 230 }
         );
     }
@@ -18,7 +18,7 @@ export default class Mundo2 extends Phaser.Scene {
         this.cursors = this.input.keyboard.createCursorKeys();
         this.casa = this.add.image(this.sys.game.canvas.width / 2, this.sys.game.canvas.height / 2, 'bus');
         //this.player = this.physics.add.sprite(this.sys.game.canvas.width / 3, this.sys.game.canvas.height, 'personaje')
-        this.player = this.physics.add.sprite(this.sys.game.canvas.width / 3, this.sys.game.canvas.height, 'personaje2')
+        this.player = this.physics.add.sprite(this.sys.game.canvas.width / 3, this.sys.game.canvas.height, 'personaje1')
        .setGravityY(100)
        .setBounce(0.2)
        .setCollideWorldBounds(true);
@@ -52,20 +52,20 @@ export default class Mundo2 extends Phaser.Scene {
     animar() {
         this.anims.create({
             key: 'left',
-            frames: this.anims.generateFrameNumbers('personaje2', { start: 1, end: 2 }),
+            frames: this.anims.generateFrameNumbers('personaje1', { start: 1, end: 2 }),
             frameRate: 10,
             repeat: -1
         });
 
         this.anims.create({
             key: 'turn',
-            frames: [{ key: 'personaje2', frame: 3 }],
+            frames: [{ key: 'personaje1', frame: 3 }],
             frameRate: 20
         });
 
         this.anims.create({
             key: 'right',
-            frames: this.anims.generateFrameNumbers('personaje2', { start: 4, end: 6 }),
+            frames: this.anims.generateFrameNumbers('personaje1', { start: 4, end: 6 }),
             frameRate: 10,
             repeat: -1
         });

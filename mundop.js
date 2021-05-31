@@ -16,8 +16,8 @@ class Mundop extends Phaser.Scene{
     create(){
         this.cursors = this.input.keyboard.createCursorKeys();
         this.background = this.add.image(this.sys.game.canvas.width / 2, this.sys.game.canvas.height / 2, 'background');
-        var sprite = this.add.sprite(500, 700, 'btn_auto').setInteractive();
-        var sprite2 = this.add.sprite(1000, 700, 'btn_casa').setInteractive();
+        var sprite = this.add.sprite(500, 700, 'btn_casa').setInteractive();
+        var sprite2 = this.add.sprite(1000, 700, 'btn_auto').setInteractive();
         var sprite3 = this.add.sprite(1500, 700, 'btn_parque').setInteractive();
     }
     update(time, delta){
@@ -27,18 +27,18 @@ class Mundop extends Phaser.Scene{
         else if (this.cursors.up.isDown){
             this.handleContinue2()
         }
-        else if (this.cursors.down.isDown){
+        else if (this.cursors.right.isDown){
             this.handleContinue3()
         }
     }
     handleContinue() {
-        this.scene.start('Mundo');
+        this.scene.start('selectorm');
     }
     handleContinue2() {
-        this.scene.start('Mundo2');
+        this.scene.start('selectorm2');
     }
     handleContinue3() {
-        this.scene.start('Mundo3');
+        this.scene.start('selectorm3');
     }
 }
 export default Mundop;

@@ -1,6 +1,6 @@
-export default class Mundo3 extends Phaser.Scene {
+export default class parquem3 extends Phaser.Scene {
     constructor() {
-        super("Mundo3");
+        super("parquem3");
     }
     init() {
 
@@ -8,9 +8,9 @@ export default class Mundo3 extends Phaser.Scene {
 
     preload() {
         this.load.image('parque', 'Fondos/parque.jpg');
-        this.load.spritesheet('personaje1',
-            'Personajes/personaje1.png',
-            { frameWidth: 205, frameHeight: 230 }
+        this.load.spritesheet('personaje3',
+            'Personajes/personaje3.png',
+            { frameWidth: 155, frameHeight: 230 }
         );
     }
 
@@ -18,7 +18,7 @@ export default class Mundo3 extends Phaser.Scene {
         this.cursors = this.input.keyboard.createCursorKeys();
         this.casa = this.add.image(this.sys.game.canvas.width / 2, this.sys.game.canvas.height / 2, 'parque');
         //this.player = this.physics.add.sprite(this.sys.game.canvas.width / 3, this.sys.game.canvas.height, 'personaje')
-        this.player = this.physics.add.sprite(this.sys.game.canvas.width / 3, this.sys.game.canvas.height, 'personaje1')
+        this.player = this.physics.add.sprite(this.sys.game.canvas.width / 3, this.sys.game.canvas.height, 'personaje3')
        .setGravityY(100)
        .setBounce(0.2)
        .setCollideWorldBounds(true);
@@ -52,20 +52,20 @@ export default class Mundo3 extends Phaser.Scene {
     animar() {
         this.anims.create({
             key: 'left',
-            frames: this.anims.generateFrameNumbers('personaje1', { start: 1, end: 2 }),
+            frames: this.anims.generateFrameNumbers('personaje3', { start: 1, end: 2 }),
             frameRate: 10,
             repeat: -1
         });
 
         this.anims.create({
             key: 'turn',
-            frames: [{ key: 'personaje1', frame: 3 }],
+            frames: [{ key: 'personaje3', frame: 3 }],
             frameRate: 20
         });
 
         this.anims.create({
             key: 'right',
-            frames: this.anims.generateFrameNumbers('personaje1', { start: 4, end: 6  }),
+            frames: this.anims.generateFrameNumbers('personaje3', { start: 4, end: 6  }),
             frameRate: 10,
             repeat: -1
         });
