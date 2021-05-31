@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Narradores</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css">
     <style>
         body {
             justify-content: center;
@@ -14,8 +18,32 @@
 </head>
 
 <body>
+    <nav class="vertical-menu">
+
+        <button id="start">Iniciar grabación</button>
+        <button onclick="        $(document).ready(function () {
+            // Handler for .ready() called.
+            $('html, body').animate({
+                scrollTop: $('#scroll').offset().top
+            }, 'slow');
+        });" id="stop" disabled>Detener grabación</button>
+        
+    </nav>
     <div id="container"></div>
     <script src="node_modules/phaser/dist/phaser.min.js"></script>
     <script src="main.js" type="module"></script>
+    
+    
+    
+    <video autoplay="true" loop="false"></video>
+    <audio autoplay="true" loop="false"></audio>
+    <script src="src/index.js"></script>
+    <a href="http://127.0.0.1:5501/index.html"><button class="volveragrabar">Volver a grabar</button></a>
+
+    <br>
+    
+    <div id="scroll">
+    </div>  
+    
 </body>
 </html>

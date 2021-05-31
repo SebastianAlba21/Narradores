@@ -1,0 +1,39 @@
+html {
+  scroll-behavior: smooth;
+ 
+ }
+ 
+ a {
+  text-decoration: none;
+  color: white;
+ } 
+ 
+
+body {
+    text-align: center;
+  }
+  
+  button {
+    display: inline-block;
+    margin: 1em 1em;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  
+  video {
+    position: absolute;
+    border: 3px solid lightgreen;
+    width: 100%;
+    background-color: #eee;
+    margin-top: 100px;
+    left: 0px;
+    margin-top: 50%;
+  }
+
+  audio {
+    border: 1px solid lightgrey;
+    width: 90%;
+    background-color: #eee;
+  }
+
+
